@@ -1,3 +1,6 @@
+# Copyright 2018 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
 metadata:
     format: Lava-Test x86 FWTS Test Definition 1.0
     name: x86-fwts-tests
