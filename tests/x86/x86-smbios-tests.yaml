@@ -1,0 +1,20 @@
+# Copyright 2019 9elements GmbH <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test x86 SMBIOS Test Definition 1.0
+    name: x86-fwts-tests
+    description: "Basic SMBIOS coreboot tests"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+
+run:
+    steps:
+              - lava-test-set start smbios
+              - lava-test-case dmidecode-bios-vendor --shell dmidecode -s bios-vendor | grep coreboot
+              - lava-test-set stop smbios
