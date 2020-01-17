@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 metadata:
-    format: Lava-Test x86 SMBIOS Test Definition 1.0
-    name: x86-fwts-tests
+    format: Lava-Test Test Definition 1.0
+    name: x86-smbios-tests-basic
     description: "Basic SMBIOS coreboot tests"
     maintainer:
         - patrick.rudolph@9elements.com
@@ -12,6 +12,7 @@ metadata:
         - fedora
     scope:
         - functional
+
 
 run:
     steps:
