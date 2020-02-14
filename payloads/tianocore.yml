@@ -1,0 +1,21 @@
+name: "TianoCore"
+commithash: "81f6f9c8e8ee9b379ba894565798f5cf0f5dc324"
+repo_url: "https://github.com/mrchromebox/edk2"
+version: "coreboot_fb"
+filename: "UEFIPAYLOAD.fd"
+cbfstool_args:
+        - "-f"
+        - "%PAYLOAD%"
+        - "-n"
+        - "fallback/payload"
+        - "-c"
+        - "lzma"
+whitelist:
+        - "CONFIG_ARCH_X86=y"
+        - "CONFIG_MMCONF_SUPPORT=y"
+blacklist:
+        - "CONFIG_GDB_WAIT=y"
+harddisk_image: "https://blobs.9esec.io/os/Fedora-HWT-disk-30-minimal-EFI.img.xz"
+harddisk_image_compression: "xz"
+harddisk_image_os: fedora
+deploy_only: false
