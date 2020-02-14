@@ -3,6 +3,7 @@ commithash: "81f6f9c8e8ee9b379ba894565798f5cf0f5dc324"
 repo_url: "https://github.com/mrchromebox/edk2"
 version: "coreboot_fb"
 filename: "UEFIPAYLOAD.fd"
+license: "BSD-2-Clause-Patent"
 cbfstool_args:
         - "-f"
         - "%PAYLOAD%"

@@ -3,6 +3,7 @@ commithash: "f21b5a4aeb020f2a5e2c6503f906a9349dd2f069"
 repo_url: "https://review.coreboot.org/seabios.git"
 version: "1.13.0"
 filename: "seabios.elf"
+license: "GPLv3"
 cbfstool_args:
         - "-f"
         - "%PAYLOAD%"
