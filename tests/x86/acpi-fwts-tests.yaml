@@ -1,0 +1,33 @@
+# Copyright 2018 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: x86-fwts-tests
+    description: "Basic ACPI FWTS system tests"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+
+run:
+    steps:
+              - lava-test-set start fwts-acpi
+              - lava-test-case fwts-checksum --shell fwts checksum -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-acpitables --shell fwts acpitables -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-fadt --shell fwts fadt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-madt --shell fwts madt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-rsdp --shell fwts rsdp -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-set stop fwts-acpi
+              - lava-test-set start fwts-sbbr
+              - lava-test-case fwts-acpi_sbbr --shell fwts acpi_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-acpitables --shell fwts acpitables -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-fadt_sbbr --shell fwts fadt_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-gtdt --shell fwts gtdt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-method --shell fwts method -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-spcr --shell fwts spcr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-xsdt --shell fwts xsdt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-set stop fwts-sbbr
