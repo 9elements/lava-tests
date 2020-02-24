@@ -11,18 +11,18 @@ definitions:
   path: tests/x86/x86-smbios-tests.yaml
   name: x86-smbios-test
   whitelist:
-  - "CONFIG_ARCH_X86=y"
-  - "CONFIG_GENERATE_SMBIOS_TABLES=y"
+    CONFIG_ARCH_X86 : y
+    CONFIG_GENERATE_SMBIOS_TABLES : y
 - repository: https://github.com/9elements/lava-tests.git
   from: git
   path: tests/x86/acpi-fwts-tests.yaml
   name: acpi-fwts-test
   whitelist:
-  - "CONFIG_HAVE_ACPI_TABLES=y"
+    CONFIG_HAVE_ACPI_TABLES : y
 - repository: https://github.com/9elements/lava-tests.git
   from: git
   path: tests/x86/x86-fwts-tests.yaml
   name: x86-fwts-test
   whitelist:
-  - "CONFIG_ARCH_X86=y"
+    CONFIG_ARCH_X86 : y
 
