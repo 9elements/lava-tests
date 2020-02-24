@@ -19,6 +19,11 @@ definitions:
   name: acpi-fwts-test
   whitelist:
     CONFIG_HAVE_ACPI_TABLES : y
+  blacklist:
+# QEMU provides it's own ACPI, don't test it
+    CONFIG_BOARD_EMULATION_QEMU_X86 : y
+    CONFIG_BOARD_EMULATION_QEMU_X86_I440FX : y
+    CONFIG_BOARD_EMULATION_QEMU_X86_Q35 : y
 - repository: https://github.com/9elements/lava-tests.git
   from: git
   path: tests/x86/x86-fwts-tests.yaml
