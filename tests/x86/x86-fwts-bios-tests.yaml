@@ -1,0 +1,20 @@
+# Copyright 2018 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: x86-fwts-bios-tests
+    description: "Basic FWTS BIOS system tests"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+
+run:
+    steps:
+              - lava-test-set start fwts-bios32
+              - lava-test-case fwts-bios32 --shell fwts bios32 -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-set stop fwts-bios32

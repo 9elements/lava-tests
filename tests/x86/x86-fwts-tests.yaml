@@ -17,8 +17,6 @@ run:
     steps:
               - lava-test-set start fwts-x86
               - lava-test-case fwts-dmicheck --shell fwts dmicheck -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-bios32 --shell fwts bios32 -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-hpet --shell fwts hpet -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
               - lava-test-case fwts-msr --shell fwts msr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
               - lava-test-case fwts-pnp --shell fwts pnp -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
               - lava-test-case fwts-pciirq --shell fwts pciirq -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO

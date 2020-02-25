@@ -1,0 +1,20 @@
+# Copyright 2018 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: x86-fwts-hpet-tests
+    description: "FWTS HPET system tests"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+
+run:
+    steps:
+              - lava-test-set start fwts-hpet
+              - lava-test-case fwts-hpet --shell fwts hpet -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-set stop fwts-hpet
