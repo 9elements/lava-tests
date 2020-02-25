@@ -41,4 +41,4 @@ definitions:
   path: tests/x86/x86-fwts-hpet-tests.yaml
   name: x86-fwts-hpet-test
   whitelist:
-    CONFIG_HPET_ADDRESS : *
+    CONFIG_HPET_ADDRESS : any
