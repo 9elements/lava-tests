@@ -1,0 +1,21 @@
+# Copyright 2020 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: sbbr-fwts-tests
+    description: "ACPI SBBR FWTS system tests"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+
+run:
+    steps:
+              - lava-test-set start fwts-sbbr
+              - lava-test-case fwts-acpi_sbbr --shell fwts acpi_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-fadt_sbbr --shell fwts fadt_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-set stop fwts-sbbr

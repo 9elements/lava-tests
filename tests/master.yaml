@@ -42,3 +42,17 @@ definitions:
   name: x86-fwts-hpet-test
   whitelist:
     CONFIG_HPET_ADDRESS : any
+- repository: https://github.com/9elements/lava-tests.git
+  from: git
+  path: tests/x86/ssbr-fwts-tests.yaml
+  name: ssbr-fwts-tests
+  whitelist:
+    CONFIG_ARCH_ARM64 : y
+    CONFIG_HAVE_ACPI_TABLES : y
+- repository: https://github.com/9elements/lava-tests.git
+  from: git
+  path: tests/x86/ssbr-fwts-tests.yaml
+  name: ssbr-fwts-tests
+  whitelist:
+    CONFIG_ARCH_ARM : y
+    CONFIG_HAVE_ACPI_TABLES : y
