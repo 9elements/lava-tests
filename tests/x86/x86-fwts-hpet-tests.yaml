@@ -16,5 +16,5 @@ metadata:
 run:
     steps:
               - lava-test-set start fwts-hpet
-              - lava-test-case fwts-hpet --shell fwts hpet -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-hpet --shell fwts hpet -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
               - lava-test-set stop fwts-hpet

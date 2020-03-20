@@ -16,13 +16,13 @@ metadata:
 run:
     steps:
               - lava-test-set start fwts-acpi
-              - lava-test-case fwts-checksum --shell fwts checksum -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-acpitables --shell fwts acpitables -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-fadt --shell fwts fadt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-madt --shell fwts madt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-rsdp --shell fwts rsdp -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-gtdt --shell fwts gtdt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-method --shell fwts method -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-spcr --shell fwts spcr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-xsdt --shell fwts xsdt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-checksum --shell fwts checksum -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-acpitables --shell fwts acpitables -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-fadt --shell fwts fadt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-madt --shell fwts madt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-rsdp --shell fwts rsdp -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-gtdt --shell fwts gtdt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-method --shell fwts method -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-spcr --shell fwts spcr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-xsdt --shell fwts xsdt -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
               - lava-test-set stop fwts-acpi

@@ -16,6 +16,6 @@ metadata:
 run:
     steps:
               - lava-test-set start fwts-sbbr
-              - lava-test-case fwts-acpi_sbbr --shell fwts acpi_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
-              - lava-test-case fwts-fadt_sbbr --shell fwts fadt_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO
+              - lava-test-case fwts-acpi_sbbr --shell fwts acpi_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - lava-test-case fwts-fadt_sbbr --shell fwts fadt_sbbr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
               - lava-test-set stop fwts-sbbr
