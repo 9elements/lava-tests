@@ -1,0 +1,21 @@
+name: "LinuxBoot u-root kexec AARCH64"
+commithash: "?"
+repo_url: "https://github.com/u-root/u-root"
+version: "v6.0.0"
+filename: "qemu-aarch64-virt-uImage"
+license: "BSD 3clause"
+cbfstool_args:
+        - "-f"
+        - "%PAYLOAD%"
+        - "-n"
+        - "fallback/payload"
+whitelist:
+        - "CONFIG_ARCH_ARM64=y"
+        - "CONFIG_BOARD_EMULATION_QEMU_AARCH64=y"
+        - "CONFIG_PAYLOAD_FIT_SUPPORT=y"
+blacklist:
+        - "CONFIG_GDB_WAIT=y"
+harddisk_image: "https://blobs.9esec.io/os/Fedora-Minimal-31-1.9.aarch64.raw.xz"
+harddisk_image_compression: "xz"
+harddisk_image_os: fedora
+deploy_only: false
