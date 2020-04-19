@@ -17,6 +17,5 @@ whitelist:
         - "LAVA_DISKLESS"
 blacklist:
         - "CONFIG_GDB_WAIT=y"
-deploy_only: true
 tags:
         - "KEXEC"

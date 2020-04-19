@@ -14,6 +14,6 @@ cbfstool_args:
         - "%INITRD%"
 whitelist:
         - "CONFIG_ARCH_X86=y"
+        - "DUMMY"
 blacklist:
         - "CONFIG_GDB_WAIT=y"
-deploy_only: true
