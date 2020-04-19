@@ -4,6 +4,7 @@ repo_url: "https://github.com/mrchromebox/edk2"
 version: "coreboot_fb"
 filename: "UEFIPAYLOAD.fd"
 license: "BSD-2-Clause-Patent"
+arch: "x86_64"
 cbfstool_args:
         - "-f"
         - "%PAYLOAD%"

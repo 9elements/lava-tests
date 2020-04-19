@@ -4,6 +4,7 @@ repo_url: "https://review.coreboot.org/seabios.git"
 version: "1.13.0"
 filename: "seabios.elf"
 license: "GPLv3"
+arch: "i386"
 cbfstool_args:
         - "-f"
         - "%PAYLOAD%"
