@@ -421,6 +421,6 @@
 
 	chosen {
 		stdout-path = "/pl011@9000000";
-		bootargs = "console=ttyAMA0 BOOT_IMAGE=(hd0,msdos2)/vmlinuz-5.3.7-301.fc31.aarch64 root=UUID=f3b19bd4-6006-4dae-be2f-ca530a547d2c ro systemd.log_color=0 systemd.log_level=debug selinux=0 biosdevname=0 net.ifnames=0";
+		bootargs = "console=ttyAMA0 BOOT_IMAGE=(hd0,msdos2)/vmlinuz-5.3.7-301.fc31.aarch64 root=UUID=f3b19bd4-6006-4dae-be2f-ca530a547d2c ro systemd.log_color=0 systemd.log_level=debug selinux=0 biosdevname=0 net.ifnames=0 audit=0";
 	};
 };
