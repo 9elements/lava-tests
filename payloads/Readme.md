@@ -38,11 +38,23 @@ blacklist:
         - "CONFIG_GDB_WAIT=y"
 harddisk_image: https://blobs.9esec.io/nightly/Fedora-HWT-disk-30-minimal-MBR.img.xz
 harddisk_image_compression: "xz"
+
+kernel_image: https://blobs.9esec.io/os/nightly/vmlinuz-5.5.17-200.fc31.x86_64
+kernel_type: zimage
+ramdisk_image: https://blobs.9esec.io/os/nightly/initramfs-5.5.17-200.fc31.x86_64.img
+ramdisk_compression: xz
+dtb_image: https://blobs.9esec.io/os/nightly/live-rootfs.squashfs.img
 ```
 
 **Description:**
 
 * `filename` configures the path to the payload binary.
+* `filename2` configures the path to another the payload binary.
+* `kernel_image` a kernel used for netboot only
+* `kernel_type` passed to some bootloaders
+* `ramdisk_image` a initramfs used for netboot only
+* `ramdisk_compression` the compression of the ramdisk (usually xz)
+* `dtb_image` a devicetree or squashfs
 * `license` the license of the project and the binary.
 * `whitelist` defines Kconfig symbols that must be present (like serial)
 * `blacklist` defines Kconfig symbols that must not be present (like GDB wait)
