@@ -20,7 +20,6 @@ cbfstool_args:
 whitelist:
         - "CONFIG_ARCH_X86=y"
         - "CONFIG_TTYS0_BASE=0x3f8"
-        - "LAVA_DISKLESS"
 blacklist:
         - "CONFIG_GDB_WAIT=y"
 tags:
