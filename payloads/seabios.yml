@@ -17,7 +17,7 @@ whitelist:
         - "CONFIG_TTYS0_BASE=0x3f8"
 blacklist:
         - "CONFIG_GDB_WAIT=y"
-harddisk_image: "http://blobs.9esec.io/os/Fedora-HWT-disk-30-minimal-MBR.img.xz"
+harddisk_image: "http://blobs.9esec.io/os/Fedora-HWT-disk-31-minimal-MBR.img.xz"
 harddisk_image_compression: "xz"
 harddisk_image_os: fedora
 tags:
