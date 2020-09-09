@@ -1,8 +1,8 @@
 name: "LinuxBoot BusyBox kexec"
-commithash: "fb154c56c2c0aa483a109b3d19ebbf0aa777ab24"
+commithash: "96ab9f8a708ef8723ec984f14025ad92ade8b180"
 repo_url: "https://gitlab.com/coreboot/buildroot"
 version: "1.3.1"
-filename: "bzImage_kexec_net"
+filename: "bzImage_kexec_net_ttyUSB0"
 filename2: "busybox-1.31-rootfs_kexec.x86_64.cpio.xz"
 kernel_image: http://blobs.9esec.io/os/vmlinuz-5.5.17-200.fc31.x86_64
 kernel_type: zimage
@@ -19,12 +19,12 @@ cbfstool_args:
         - "%INITRD%"
 whitelist:
         - "CONFIG_ARCH_X86=y"
-        - "CONFIG_TTYS0_BASE=0x3f8"
-        - "CONFIG_CONSOLE_SERIAL=y"
-blacklist:
         - "CONFIG_USBDEBUG=y"
         - "CONFIG_USBDEBUG_DONGLE_FTDI_FT232H=y"
         - "CONFIG_CONSOLE_USB=y"
+blacklist:
         - "CONFIG_GDB_WAIT=y"
+        - "CONFIG_TTYS0_BASE=0x3f8"
+        - "CONFIG_CONSOLE_SERIAL=y"
 tags:
         - "KEXEC"
