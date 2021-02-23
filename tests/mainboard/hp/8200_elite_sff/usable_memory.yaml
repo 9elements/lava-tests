@@ -12,10 +12,17 @@ metadata:
         - fedora
     scope:
         - functional
+
+install:
+    git-repos:
+        - git://github.com/9elements/go-linux-lowlevel-hw.git
+
 run:
     steps:
+        - mkdir -p go/src/github.com/9elements/
+        - cp -r ./go-linux-lowlevel-hw go/src/github.com/9elements/
         - pwd
         - find -L
-        - go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
+        - GOPATH=$(pwd) go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
 
 
