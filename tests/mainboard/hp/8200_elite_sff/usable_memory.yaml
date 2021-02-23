@@ -20,9 +20,7 @@ install:
 run:
     steps:
         - mkdir -p go/src/github.com/9elements/
-        - cp -r ./go-linux-lowlevel-hw go/src/github.com/9elements/
-        - pwd
-        - find -L
+        - cd go/src/github.com/9elements/; ln -s ../../../../go-linux-lowlevel-hw .
         - GOPATH=$(pwd)/go go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
 
 
