@@ -14,6 +14,8 @@ metadata:
         - functional
 run:
     steps:
+        - pwd
+        - find -L
         - go test -test.v usable_memory_test.go
 
 
