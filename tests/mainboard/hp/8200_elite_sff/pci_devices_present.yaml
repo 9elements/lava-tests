@@ -14,6 +14,6 @@ metadata:
         - functional
 run:
     steps:
-        - go test -test.v pci_devices_present_test.go
+        - go test -test.v ./tests/mainboard/hp/8200_elite_sff/pci_devices_present_test.go
 
 

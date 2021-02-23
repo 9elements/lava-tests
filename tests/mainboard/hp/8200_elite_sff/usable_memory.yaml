@@ -16,6 +16,6 @@ run:
     steps:
         - pwd
         - find -L
-        - go test -test.v usable_memory_test.go
+        - go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
 
 
