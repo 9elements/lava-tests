@@ -1,0 +1,19 @@
+# Copyright 2021 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: turbo-tests
+    description: "Tests if all PCI devices are visible"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+run:
+    steps:
+        - go test -test.v pci_devices_present_test.go
+
+
