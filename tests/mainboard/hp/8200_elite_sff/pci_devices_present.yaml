@@ -3,7 +3,7 @@
 
 metadata:
     format: Lava-Test Test Definition 1.0
-    name: turbo-tests
+    name: mb-all-pci-devices-visible
     description: "Tests if all PCI devices are visible"
     maintainer:
         - patrick.rudolph@9elements.com
