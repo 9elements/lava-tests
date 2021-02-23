@@ -20,5 +20,5 @@ run:
     steps:
         - mkdir -p go/src/github.com/9elements/
         - ln -s ../../../../go-linux-lowlevel-hw go/src/github.com/9elements/go-linux-lowlevel-hw
-        - GOPATH=$(pwd)/go go test -test.v ./tests/mainboard/hp/8200_elite_sff/pci_devices_present_test.go
+        - GOPATH=$(pwd)/go lava-test-case mb-all-pci-devices-visible --shell go test -test.v ./tests/mainboard/hp/8200_elite_sff/pci_devices_present_test.go
 
