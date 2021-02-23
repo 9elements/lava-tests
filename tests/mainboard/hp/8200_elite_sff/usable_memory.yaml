@@ -23,6 +23,6 @@ run:
         - cp -r ./go-linux-lowlevel-hw go/src/github.com/9elements/
         - pwd
         - find -L
-        - GOPATH=$(pwd) go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
+        - GOPATH=$(pwd)/go go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
 
 
