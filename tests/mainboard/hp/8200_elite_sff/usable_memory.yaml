@@ -3,7 +3,7 @@
 
 metadata:
     format: Lava-Test Test Definition 1.0
-    name: turbo-tests
+    name: mb-memory-tests
     description: "Tests if memory above 4GiB is advertised as usable"
     maintainer:
         - patrick.rudolph@9elements.com
@@ -21,6 +21,8 @@ run:
     steps:
         - mkdir -p go/src/github.com/9elements/
         - ln -s ../../../../go-linux-lowlevel-hw go/src/github.com/9elements/go-linux-lowlevel-hw
-        - GOPATH=$(pwd)/go go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
+        - lava-test-set start mb-memory-tests
+        - GOPATH=$(pwd)/go lava-test-case mb-memory-above-4g-usable --shell go test -test.v ./tests/mainboard/hp/8200_elite_sff/usable_memory_test.go
+        - lava-test-set stop mb-memory-tests
 
 
