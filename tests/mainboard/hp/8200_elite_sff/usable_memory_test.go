@@ -12,7 +12,6 @@ import (
 // TODO: remove assumptions
 func TestUsableMemoryAbove4G(t *testing.T) {
 	h := hwapi.GetAPI()
-        t.Errorf("Test error\n")
 	memory, err := h.UsableMemoryAbove4G()
 	if err != nil {
 		t.Skipf("Internal error: %v", err)
