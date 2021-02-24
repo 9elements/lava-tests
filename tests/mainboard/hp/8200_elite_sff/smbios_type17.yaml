@@ -1,0 +1,24 @@
+# Copyright 2021 Patrick Rudolph <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: mb-smbios-type17
+    description: "Tests if SMBIOS type 17 is correctly advertised"
+    maintainer:
+        - patrick.rudolph@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+install:
+    git-repos:
+        - git://github.com/9elements/go-linux-lowlevel-hw.git
+
+run:
+    steps:
+        - mkdir -p go/src/github.com/9elements/
+        - ln -s ../../../../go-linux-lowlevel-hw go/src/github.com/9elements/go-linux-lowlevel-hw
+        - SMBIOS_TYPE17_ECC_ENABLED=false SMBIOS_TYPE17_COUNT=3 SMBIOS_TYPE17_MIN_SIZE=0x80000000 SMBIOS_TYPE17_MAX_SIZE=0x100000000 GOPATH=$(pwd)/go lava-test-case mb-smbios-type17 --shell go test -test.v ./tests/mainboard/hp/8200_elite_sff/smbios_type17_test.go
+
