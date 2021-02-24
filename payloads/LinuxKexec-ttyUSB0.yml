@@ -1,4 +1,4 @@
-name: "LinuxBoot BusyBox kexec"
+name: "LinuxBoot BB kexec"
 commithash: "96ab9f8a708ef8723ec984f14025ad92ade8b180"
 repo_url: "https://gitlab.com/coreboot/buildroot"
 version: "1.3.1"
