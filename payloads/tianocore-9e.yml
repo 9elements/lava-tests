@@ -18,7 +18,7 @@ whitelist:
         - "CONFIG_BOARD_PRODRIVE_HERMES=y"
 blacklist:
         - "CONFIG_GDB_WAIT=y"
-harddisk_image: "http://blobs.9esec.io/os/Fedora-HWT-disk-31-minimal-EFI.img.xz"
+harddisk_image: "http://blobs.9esec.io/os/Fedora-HWT-disk-32-minimal-EFI.img.xz"
 harddisk_image_compression: "xz"
 harddisk_image_os: fedora
 tags:
