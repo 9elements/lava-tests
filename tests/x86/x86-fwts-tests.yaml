@@ -16,9 +16,10 @@ metadata:
 run:
     steps:
               - lava-test-set start fwts-x86
-              - lava-test-case fwts-dmicheck --shell fwts dmicheck -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
-              - lava-test-case fwts-msr --shell fwts msr -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
-              - lava-test-case fwts-pnp --shell fwts pnp -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
-              - lava-test-case fwts-pciirq --shell fwts pciirq -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
-              - lava-test-case fwts-mpcheck --shell fwts mpcheck -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO --log-level high
+              - TEST='fwts $CMD $ADD -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO,WRN || /bin/true; lava-test-case fwts-$CMD --result $(fwts $CMD $ADD -q --stdout-summary|grep -q FAIL && echo "fail" || echo "pass")'
+              - CMD=dmicheck ADD="--filter-error-discard DMIBadTableLength" eval $TEST
+              - CMD=msr ADD="" eval $TEST
+              - CMD=pnp ADD="" eval $TEST
+              - CMD=pciirq ADD="" eval $TEST
+              - CMD=mpcheck ADD="" eval $TEST
               - lava-test-set stop fwts-x86
