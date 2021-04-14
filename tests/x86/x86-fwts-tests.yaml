@@ -18,7 +18,7 @@ run:
               - lava-test-set start fwts-x86
               - TEST='fwts $CMD $ADD -q -r stdout --log-filter=SKP,PAS,FAL,ABT,INO,WRN || /bin/true; lava-test-case fwts-$CMD --result $(fwts $CMD $ADD -q --stdout-summary|grep -q FAIL && echo "fail" || echo "pass")'
               - CMD=dmicheck ADD="--filter-error-discard DMIBadTableLength --filter-error-discard DMIValueOutOfRange" eval $TEST
-              - CMD=msr ADD="" eval $TEST
+              - CMD=msr ADD="--filter-error-discard MSRCPUsInconsistent" eval $TEST
               - CMD=pnp ADD="" eval $TEST
               - CMD=pciirq ADD="" eval $TEST
               - CMD=mpcheck ADD="" eval $TEST
