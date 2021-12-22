@@ -17,5 +17,5 @@ metadata:
 run:
     steps:
               - lava-test-set start cbmem 
-              - lava-test-case cbmem --shell cbmem -t 
+              - lava-test-case cbmem-timestamps --shell cbmem -t 
               - lava-test-set stop cbmem 

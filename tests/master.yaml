@@ -12,6 +12,7 @@ definitions:
   name: x86-coreboot-test
   whitelist:
     CONFIG_ARCH_X86 : y
+    CONFIG_COLLECT_TIMESTAMPS : y
 - repository: https://github.com/9elements/lava-tests.git
   from: git
   path: tests/x86/x86-smbios-tests.yaml
