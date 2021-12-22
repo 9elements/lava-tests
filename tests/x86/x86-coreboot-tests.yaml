@@ -1,0 +1,21 @@
+# Copyright 2019 9elements GmbH <patrick.rudolph@9elements.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: x86-coreboot-tests-basic
+    description: "Basic coreboot tests"
+    maintainer:
+        - patrik.tesarik@9elements.com
+    os:
+        - ubuntu
+        - fedora
+    scope:
+        - functional
+
+
+run:
+    steps:
+              - lava-test-set start cbmem 
+              - lava-test-case cbmem --shell cbmem -t 
+              - lava-test-set stop cbmem 
