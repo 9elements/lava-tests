@@ -14,7 +14,7 @@ definitions:
     CONFIG_ARCH_X86 : y
     CONFIG_COLLECT_TIMESTAMPS : y
   blacklist:
-    CONFIG_UNKOWN_TSC_RATE: y
+    CONFIG_UNKNOWN_TSC_RATE: y
 - repository: https://github.com/9elements/lava-tests.git
   from: git
   path: tests/x86/x86-smbios-tests.yaml
